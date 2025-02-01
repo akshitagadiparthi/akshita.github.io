@@ -11,15 +11,21 @@ header {
     color: white;
     padding: 15px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -29,29 +35,70 @@ nav ul li a {
     font-weight: bold;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
     background: white;
+    padding: 15px;
+    margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    text-align: center;
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
 }
 
-ul {
-    padding-left: 20px;
+input, textarea, button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1rem;
 }
 
-a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
+button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-a:hover {
-    text-decoration: underline;
+button:hover {
+    background: #005bb5;
 }
 
+#dark-mode-toggle {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
